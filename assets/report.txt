@@ -1,0 +1,38 @@
+[
+{
+   report_slug:'investMenst_worthiness',
+   report_Name:'Investment  Worthiness Diagnostic Report',
+   report_Desc:['Gain essential insights into financial compliance mitigation, ensuring adherence to regulations and minimizing risks of penalties or legal issues.','Receive a comprehensive overview of financial compliance mitigation strategies, enabling proactive measures to address regulatory requirements and enhance organizational risk management practices','Access actionable insights on financial compliance mitigation, empowering them to implement effective strategies for regulatory adherence, risk mitigation, and organizational resilience'],
+   report_images:['assets/images/report1.png','assets/images/report1.png','assets/images/report1.png'],
+   color:'warning'
+
+},
+{
+    report_slug:'Value_Dynamics_Diagnostic',
+    report_Name:'Value Dynamic Diagnostic Report',
+    report_Desc:['Gain essential insights into financial compliance mitigation, ensuring adherence to regulations and minimizing risks of penalties or legal issues.','Receive a comprehensive overview of financial compliance mitigation strategies, enabling proactive measures to address regulatory requirements and enhance organizational risk management practices','Access actionable insights on financial compliance mitigation, empowering them to implement effective strategies for regulatory adherence, risk mitigation, and organizational resilience'],
+    report_images:['assets/images/report1.png','assets/images/report1.png','assets/images/report1.png'],
+    color:'secondary'
+ },
+ {
+    report_slug:'Performance_Culture_Profile',
+    report_Name:'Performance Culture  Profile',
+    report_Desc:['Gain essential insights into financial compliance mitigation, ensuring adherence to regulations and minimizing risks of penalties or legal issues.','Receive a comprehensive overview of financial compliance mitigation strategies, enabling proactive measures to address regulatory requirements and enhance organizational risk management practices','Access actionable insights on financial compliance mitigation, empowering them to implement effective strategies for regulatory adherence, risk mitigation, and organizational resilience'],
+    report_images:['assets/images/report1.png','assets/images/report1.png','assets/images/report1.png'],
+    color:'orange-color'
+ },
+ {
+    report_slug:'Talent_Ecosystem_Assessment_Map',
+    report_Name:'Talent Ecosystem Assesment Mapping',
+    report_Desc:['Gain essential insights into financial compliance mitigation, ensuring adherence to regulations and minimizing risks of penalties or legal issues.','Receive a comprehensive overview of financial compliance mitigation strategies, enabling proactive measures to address regulatory requirements and enhance organizational risk management practices','Access actionable insights on financial compliance mitigation, empowering them to implement effective strategies for regulatory adherence, risk mitigation, and organizational resilience'],
+    report_images:['assets/images/report1.png','assets/images/report1.png','assets/images/report1.png'],
+    color:'blue-color'
+ },
+ {
+    report_slug:'Financial_Oversight_and_Compliance_Utilization_Synthesis_Report ',
+    report_Name:'Financial Oversight and Compliance Utilization Synthesis (FOCUS) Report',
+    report_Desc:['Gain essential insights into financial compliance mitigation, ensuring adherence to regulations and minimizing risks of penalties or legal issues.','Receive a comprehensive overview of financial compliance mitigation strategies, enabling proactive measures to address regulatory requirements and enhance organizational risk management practices','Access actionable insights on financial compliance mitigation, empowering them to implement effective strategies for regulatory adherence, risk mitigation, and organizational resilience'],
+    report_images:['assets/images/report1.png','assets/images/report1.png','assets/images/report1.png'],
+    color:'danger'
+ },
+]

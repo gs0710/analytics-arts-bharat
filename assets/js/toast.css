@@ -1,0 +1,90 @@
+.toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: clamp(25vw, 300px, calc(100% - 2rem));
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 100000;
+}
+@keyframes slide-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+@keyframes slide-up {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50vh);
+    }
+}
+.toast .left {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.toast.success {
+    background: #d5fde2;
+    color: #075b21;
+    border: 1px solid #075b21;
+}
+
+.toast.error {
+    background: #ffdfe1;
+    color: #d90000;
+    border: 1px solid #d90000;
+}
+.toast .timer {
+    position: absolute;
+    top: calc(100% - 3px);
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform: translateX(-100%);
+}
+@keyframes move-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.toast.success .timer {
+    background: #075b21;
+    opacity: 0.5;
+}
+.toast.error .timer {
+    background: #d90000;
+    opacity: 0.5;
+}
+
+i {
+    margin-block: .2rem;
+}
+
+@media only screen and (max-width: 450px) {
+    .toast {
+        right: 1rem;
+    }
+}

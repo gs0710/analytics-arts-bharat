@@ -1,0 +1,375 @@
+/* ==========================================================================
+   SERVICES & SUB-PAGES DESIGN SYSTEM (DAMA Dark Theme)
+   ========================================================================== */
+
+:root {
+    --sp-bg: #080808;
+    --sp-card-bg: #111111;
+    --sp-card-border: #1f1f1f;
+    --sp-card-hover: #181818;
+    --sp-accent: #ff7a18;
+    --sp-cyan: #22d3ee;
+    --sp-teal: #14b8a6;
+    --sp-text: #ffffff;
+    --sp-muted: #8e8e8e;
+    --sp-light-muted: #b5b5b5;
+}
+
+body.services-body {
+    background-color: var(--sp-bg) !important;
+    color: var(--sp-text);
+    font-family: 'Inter', 'TT Norms Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   TOP STICKY SERVICES TABS
+   -------------------------------------------------------------------------- */
+.services-tabs-wrapper {
+    position: sticky;
+    top: calc(72px + 2rem);
+    z-index: 100;
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid #1a1a1a;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.services-tabs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.services-tabs-container::-webkit-scrollbar {
+    display: none;
+}
+
+.service-tab-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--sp-muted);
+    background: none;
+    border: none;
+    padding: 1.1rem 0.25rem 1.1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    transition: color 200ms ease;
+    text-decoration: none;
+}
+
+.service-tab-item:hover {
+    color: #ffffff;
+}
+
+.service-tab-item.active {
+    color: var(--sp-accent);
+    font-weight: 600;
+}
+
+.service-tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--sp-accent);
+    box-shadow: 0 0 12px rgba(255, 122, 24, 0.5);
+    border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   SERVICE SECTION LAYOUT
+   -------------------------------------------------------------------------- */
+.service-view-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 6rem;
+    display: none;
+    animation: spFadeIn 0.4s ease forwards;
+}
+
+.service-view-section.active {
+    display: block;
+}
+
+@keyframes spFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header & Intro */
+.approach-header {
+    margin-bottom: 3.5rem;
+}
+
+.approach-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--sp-accent);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.approach-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    margin: 0 0 1rem;
+}
+
+.approach-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    color: var(--sp-muted);
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   DIAGRAM WRAPPER & VISUAL FRAMEWORK
+   -------------------------------------------------------------------------- */
+.framework-diagram-card {
+    background: radial-gradient(ellipse at 50% 50%, #0d1e1c 0%, #080d0d 60%, #060606 100%);
+    border: 1px solid #1c2624;
+    border-radius: 32px;
+    padding: 3rem 2rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 0 40px rgba(20, 184, 166, 0.04);
+}
+
+/* Decorative background topography pattern */
+.framework-diagram-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+    background-size: 24px 24px;
+    pointer-events: none;
+}
+
+.framework-flow-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #222 transparent;
+    padding-bottom: 1rem;
+}
+
+.framework-svg-container {
+    min-width: 980px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   BOTTOM HIGHLIGHTS PILL BAR
+   -------------------------------------------------------------------------- */
+.approach-highlights-bar {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    padding: 1.75rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.highlight-icon-wrap {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sp-accent);
+    font-size: 1.35rem;
+    margin-top: 2px;
+}
+
+.highlight-icon-wrap svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--sp-accent);
+}
+
+.highlight-content h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f0f0f;
+    margin: 0 0 0.35rem;
+    line-height: 1.2;
+}
+
+.highlight-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #555555;
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   MODULES / CAPABILITIES SLIDE CARDS
+   -------------------------------------------------------------------------- */
+.modules-section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.modules-section-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: var(--sp-accent);
+    border-radius: 2px;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.module-card {
+    background: #0f0f0f;
+    border: 1px solid #1e1e1e;
+    border-radius: 18px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 200ms ease, background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-card:hover {
+    transform: translateY(-4px);
+    background: #141414;
+    border-color: #333333;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.module-card::after {
+    content: '→';
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%) translateX(-4px);
+    font-size: 1.1rem;
+    color: var(--sp-accent);
+    opacity: 0;
+    transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.module-card:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.module-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 122, 24, 0.08);
+    border: 1px solid rgba(255, 122, 24, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.module-card-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0.9);
+}
+
+.module-card-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #e5e5e5;
+    padding-right: 1.5rem;
+    transition: color 200ms ease;
+}
+
+.module-card:hover .module-card-text {
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .approach-highlights-bar {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-tabs-wrapper {
+        top: 64px;
+        padding: 0 1rem;
+    }
+    .services-tabs-container {
+        gap: 1.5rem;
+    }
+    .service-view-section {
+        padding: 1.5rem 1rem 4rem;
+    }
+    .approach-highlights-bar {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .framework-diagram-card {
+        padding: 1.5rem 1rem;
+        border-radius: 22px;
+    }
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}
