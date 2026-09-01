@@ -1,7 +1,7 @@
 FROM php:8.2-apache
 
-# Enable Apache mod_rewrite for CodeIgniter routing
-RUN a2enmod rewrite
+# Enable Apache mod_rewrite and mod_headers for CodeIgniter routing and CORS headers
+RUN a2enmod rewrite headers
 
 # Install mysqli and other required PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql
